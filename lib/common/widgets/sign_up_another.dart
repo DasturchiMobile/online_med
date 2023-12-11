@@ -31,12 +31,9 @@ class SignUpAnother extends StatelessWidget {
     height: 56,
     decoration: BoxDecoration(
       border: Border.all(width: 1, color: const Color(0xFFE5E7EB)),
-      borderRadius: BorderRadius.circular(32),
-    ),
-    child: Stack(
-      children: [
+      borderRadius: BorderRadius.circular(32)),
+    child: Stack(children: [
         InkWell(borderRadius: BorderRadius.circular(32),onTap: () => onTab(),child: Center(child: Text(text, style: TextStyle(color: AppColors.black, fontSize: 16,fontWeight: FontWeight.w600, fontFamily: "Inter"),),)),
         Positioned(left: 18,top:18,child: Image(image: AssetImage(icon),width: 20)),
-      ],
-    ),);
+      ],),);
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:online_med/common/widgets/custom_green_button.dart';
+import 'package:online_med/features/auth/sign_up/Sign%20Up/presentation/pages/sign_up_screen.dart';
 import 'package:online_med/features/onboarding/presentation/widgets/sign_up_button.dart';
 
 import '../../../auth/sign_in/Login/presentation/pages/login_screen.dart';
@@ -30,7 +31,7 @@ class LoginOnBoardingScreen extends StatelessWidget {
               }),
               const SizedBox(height: 16),
               SignUpButton(text: "Sign Up", onTap: (){
-                Navigator.of(context).push(CupertinoPageRoute(builder: (context) => const Scaffold()));
+                Navigator.of(context).push(CupertinoPageRoute(builder: (context) => const SignUpScreen()));
               }),
             ],
           ),

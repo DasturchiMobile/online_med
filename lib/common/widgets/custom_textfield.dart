@@ -25,6 +25,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
           }
           return null;
         }
+        if(widget.textEditingController.text.isEmpty){
+          return "username must be at least 1 character long";
+        }
         return null;
       },
       decoration: InputDecoration(

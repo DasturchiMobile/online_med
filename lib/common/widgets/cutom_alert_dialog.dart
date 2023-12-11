@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:online_med/common/colors/app_color.dart';
 import 'package:online_med/common/widgets/custom_green_button.dart';
@@ -38,7 +39,9 @@ class CustomAlertDialog extends StatelessWidget {
         Text(title, style: TextStyle(color: AppColors.black, fontFamily: "Inter", fontSize: 20, fontWeight: FontWeight.w700),textAlign: TextAlign.center,),
         const SizedBox(height: 8,),
         Text(subtitle, style: TextStyle(color: AppColors.greyText, fontFamily: "Inter", fontSize: 16, fontWeight: FontWeight.w400),textAlign: TextAlign.center,),
-        Padding(padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 45), child: CustomGreenButton(text: buttonTitle, onTap: (){onTab();}),),
+        Padding(padding: const EdgeInsets.only(top: 24, left: 45, right: 45,), child: CustomGreenButton(text: buttonTitle, onTap: (){onTab();}),),
+        const SizedBox(height: 8,),
+        cancelButton?CupertinoButton(onPressed: () => Navigator.of(context).pop(), child: Text("Cancel", style: TextStyle(color: AppColors.green, fontFamily: "Inter", fontSize: 20, fontWeight: FontWeight.w700),textAlign: TextAlign.center,)):const SizedBox(),
       ],
       ),
     );

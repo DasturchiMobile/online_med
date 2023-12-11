@@ -15,9 +15,15 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField> {
   bool isVisit = true;
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       onChanged: (value){
         widget.textEditingController.text = value;
+      },
+      validator: (pass){
+        if(pass == null || pass.length < 8){
+          return "password must be at least 8 characters long";
+        }
+        return null;
       },
       obscureText: isVisit,
       decoration: widget.error ? error(): success(),
