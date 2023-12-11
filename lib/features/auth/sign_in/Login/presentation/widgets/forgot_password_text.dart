@@ -9,13 +9,8 @@ class ForgotPasswordText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const Spacer(),
-        InkWell(onTap: (){
-          Navigator.of(context).push(CupertinoPageRoute(builder: (context) => const Scaffold()));
-        }, child: Text(text, style: TextStyle(color: AppColors.green, fontSize: 14, fontFamily: "Inter", fontWeight: FontWeight.w500))),
-      ],
-    );
+    return InkWell(onTap: (){
+      Navigator.of(context).push(CupertinoPageRoute(builder: (context) => const Scaffold()));
+    }, child: Text(text, style: TextStyle(color: AppColors.green, fontSize: 14, fontFamily: "Inter", fontWeight: FontWeight.w500)));
   }
 }

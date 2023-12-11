@@ -14,7 +14,19 @@ class CustomTextField extends StatefulWidget {
 class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      onChanged: (text){
+        widget.textEditingController.text = text;
+      },
+      validator: (text){
+        if(widget.hintText.toLowerCase().contains("email")){
+          if(!widget.textEditingController.text.contains("@") || !widget.textEditingController.text.contains(".")){
+            return "Enter correct email";
+          }
+          return null;
+        }
+        return null;
+      },
       decoration: InputDecoration(
         hintText: widget.hintText,
         hintStyle: const TextStyle(color: Color(0xFFA1A8B0), fontSize: 16,fontFamily: "Inter", fontWeight: FontWeight.w400),

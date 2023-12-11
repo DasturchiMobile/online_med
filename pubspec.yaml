@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_bloc: ^8.1.3
+  zoom_tap_animation: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -63,7 +64,7 @@ flutter:
   assets:
      - assets/
      - assets/images/
-     - assets/images/icon/
+     - assets/images/Icon/
      - assets/images/onboarding/
      - assets/fonts/
      - assets/fonts/Montserrat-VariableFont_wght.ttf
